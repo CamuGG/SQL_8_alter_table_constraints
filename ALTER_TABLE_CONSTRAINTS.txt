@@ -1,0 +1,11 @@
+# Add constraints to every column of the INGREDIENTS table, you should use NOT NULL for some columns and unique for other(s)
+
+
+ALTER TABLE ingredient
+MODIFY NAME VARCHAR(255) NOT NULL,
+MODIFY contains_lactose TINYINT(1) NOT NULL,
+MODIFY vegetarian TINYINT(1) NOT NULL,
+MODIFY vegan TINYINT(1) NOT NULL, 
+MODIFY gluten_free TINYINT(1) NOT NULL, 
+MODIFY price DOUBLE NOT NULL,
+ADD CONSTRAINT UNIQUE_NAME UNIQUE(NAME); 
